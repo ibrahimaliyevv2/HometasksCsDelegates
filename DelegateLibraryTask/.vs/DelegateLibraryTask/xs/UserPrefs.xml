@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{54704F27-420E-4BC0-979F-18ADE86165A9}|Default">
+  <MonoDevelop.Ide.ItemProperties.DelegateLibraryTask PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="DelegateLibraryTask/Program.cs">
+    <Files>
+      <File FileName="DelegateLibraryTask/Program.cs" Line="33" Column="18" />
+      <File FileName="Models/Book.cs" Line="14" Column="27" />
+      <File FileName="Utilities/Enums/TypeGenre.cs" Line="11" Column="2" />
+      <File FileName="Models/Library.cs" Line="80" Column="10" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="DelegateLibraryTask" expanded="True">
+            <Node name="DelegateLibraryTask" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+            <Node name="Models" expanded="True" />
+            <Node name="Utilities" expanded="True">
+              <Node name="Enums" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

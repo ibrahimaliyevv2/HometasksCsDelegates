@@ -1,0 +1,13 @@
+/Users/ibrahimaliyevv/Projects/HometasksCsDelegates/DelegateLibraryTask/Models/bin/Debug/netcoreapp3.1/Models.deps.json
+/Users/ibrahimaliyevv/Projects/HometasksCsDelegates/DelegateLibraryTask/Models/bin/Debug/netcoreapp3.1/Models.dll
+/Users/ibrahimaliyevv/Projects/HometasksCsDelegates/DelegateLibraryTask/Models/bin/Debug/netcoreapp3.1/Models.pdb
+/Users/ibrahimaliyevv/Projects/HometasksCsDelegates/DelegateLibraryTask/Models/bin/Debug/netcoreapp3.1/Utilities.dll
+/Users/ibrahimaliyevv/Projects/HometasksCsDelegates/DelegateLibraryTask/Models/bin/Debug/netcoreapp3.1/Utilities.pdb
+/Users/ibrahimaliyevv/Projects/HometasksCsDelegates/DelegateLibraryTask/Models/obj/Debug/netcoreapp3.1/Models.csproj.AssemblyReference.cache
+/Users/ibrahimaliyevv/Projects/HometasksCsDelegates/DelegateLibraryTask/Models/obj/Debug/netcoreapp3.1/Models.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ibrahimaliyevv/Projects/HometasksCsDelegates/DelegateLibraryTask/Models/obj/Debug/netcoreapp3.1/Models.AssemblyInfoInputs.cache
+/Users/ibrahimaliyevv/Projects/HometasksCsDelegates/DelegateLibraryTask/Models/obj/Debug/netcoreapp3.1/Models.AssemblyInfo.cs
+/Users/ibrahimaliyevv/Projects/HometasksCsDelegates/DelegateLibraryTask/Models/obj/Debug/netcoreapp3.1/Models.csproj.CoreCompileInputs.cache
+/Users/ibrahimaliyevv/Projects/HometasksCsDelegates/DelegateLibraryTask/Models/obj/Debug/netcoreapp3.1/Models.csproj.CopyComplete
+/Users/ibrahimaliyevv/Projects/HometasksCsDelegates/DelegateLibraryTask/Models/obj/Debug/netcoreapp3.1/Models.dll
+/Users/ibrahimaliyevv/Projects/HometasksCsDelegates/DelegateLibraryTask/Models/obj/Debug/netcoreapp3.1/Models.pdb
