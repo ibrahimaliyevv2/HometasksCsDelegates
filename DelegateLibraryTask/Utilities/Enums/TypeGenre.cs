@@ -3,7 +3,7 @@ namespace Utilities.Enums
 {
     public enum TypeGenre:byte
     {
-        Historical,
+        Historical=1,
         Horror,
         Poetry,
         Drama

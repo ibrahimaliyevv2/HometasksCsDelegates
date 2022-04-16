@@ -7,11 +7,8 @@ namespace Models
     {
         private static int _no;
 
-        public Book(string name, string authorName, double price)
+        public Book()
         {
-            Name = name;
-            AuthorName = authorName;
-            Price = price;
             _no++;
             No = _no;
         }

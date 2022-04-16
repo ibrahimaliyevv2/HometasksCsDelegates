@@ -2,10 +2,10 @@
   <MonoDevelop.Ide.ItemProperties.DelegateLibraryTask PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="DelegateLibraryTask/Program.cs">
     <Files>
-      <File FileName="DelegateLibraryTask/Program.cs" Line="33" Column="18" />
-      <File FileName="Models/Book.cs" Line="14" Column="27" />
-      <File FileName="Utilities/Enums/TypeGenre.cs" Line="11" Column="2" />
-      <File FileName="Models/Library.cs" Line="80" Column="10" />
+      <File FileName="DelegateLibraryTask/Program.cs" Line="17" Column="51" />
+      <File FileName="Models/Book.cs" Line="17" Column="41" />
+      <File FileName="Utilities/Enums/TypeGenre.cs" Line="10" Column="6" />
+      <File FileName="Models/Library.cs" Line="43" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

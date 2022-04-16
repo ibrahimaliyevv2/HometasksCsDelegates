@@ -9,80 +9,81 @@ namespace DelegateLibraryTask
     {
         static void Main(string[] args)
         {
-            Library library1 = new Library();
+            Library kitabxana = new Library();
 
             Console.WriteLine("Nece kitab elave etmek isteyirsiniz?");
             int countOfBooks = int.Parse(Console.ReadLine());
-            int i = 1;
 
-            while (countOfBooks > 0 && i<countOfBooks)
+            for (int i = 0; i < countOfBooks; i++)
             {
-                Console.WriteLine(i + "-ci kitabin adini daxil edin: ");
+                Console.WriteLine($"{i + 1}-ci kitabin adini daxil edin:");
                 string name = Console.ReadLine();
-
-                Console.WriteLine(i + "-ci kitabin muellifini daxil edin: ");
+                Console.WriteLine($"{i + 1}-ci kitabin muellifinin adini daxil edin:");
                 string authorName = Console.ReadLine();
-
-                Console.WriteLine(i + "-ci kitabin qiymetini daxil edin: ");
+                Console.WriteLine($"{i + 1}-ci kitabin qiymetini daxil edin:");
                 double price = double.Parse(Console.ReadLine());
-
-                Book book = new Book(name, authorName, price);
-
-                Console.WriteLine(i + "-ci kitabin janrini daxil edin:");
                 foreach (var item in Enum.GetValues(typeof(TypeGenre)))
                 {
-                    Console.WriteLine((byte)item + " - " + item);
+                    Console.WriteLine($"{(byte)item} - {item}");
+                }
+                Console.WriteLine("Zehmet olmasa secim edin:");
+                string choose = Console.ReadLine();
+                byte choosenByte;
+
+                while (!byte.TryParse(choose, out choosenByte))
+                {
+                    Console.WriteLine("Yalniz eded daxil edin:");
+                    choose = Console.ReadLine();
                 }
 
-                Console.WriteLine("Secim edin:");
-                string typeStr = Console.ReadLine();
-                byte typeByte;
+                while (!Enum.IsDefined(typeof(TypeGenre), choosenByte))
+                {
+                    Console.WriteLine("Duzgun secim edin:");
+                    choose = Console.ReadLine();
 
-                while (!byte.TryParse(typeStr, out typeByte))
-                {
-                    Console.WriteLine("Janrin nomresini daxil edin:");
-                    typeStr = Console.ReadLine();
-                }
-                while (!Enum.IsDefined(typeof(TypeGenre), typeByte))
-                {
-                    Console.WriteLine("Dogru daxil edin");
-                    typeStr = Console.ReadLine();
-                    while (!byte.TryParse(typeStr, out typeByte))
+                    while (!byte.TryParse(choose, out choosenByte))
                     {
-                        Console.WriteLine("Eded daxil edin: ");
-                        typeStr = Console.ReadLine();
+                        Console.WriteLine("Yalniz eded daxil edin:");
+                        choose = Console.ReadLine();
                     }
-                    typeByte = Convert.ToByte(typeStr);
+                    choosenByte = Convert.ToByte(choose);
                 }
 
-                TypeGenre selectedGenre = (TypeGenre)typeByte;
+                TypeGenre selectedGenre = (TypeGenre)choosenByte;
 
-                book.Genre = selectedGenre;
+                Book book1 = new Book
+                {
+                    Name = name,
+                    AuthorName = authorName,
+                    Price = price,
+                    Genre = selectedGenre
+                };
 
-                library1.AddNewBook(book);
-                i++;
+                kitabxana.Books.Add(book1);
             }
 
-
-            foreach (var item in library1.FilterByPrice(10, 20))
+            Console.WriteLine("Filter By price");
+            foreach (var item in kitabxana.FilterByPrice(0, 50))
             {
-                Console.WriteLine($"{item.No} - {item.Name} - {item.AuthorName} - {item.Genre} - {item.Price}");
+                Console.WriteLine($"{item.Name} {item.AuthorName} {item.Price} {item.Genre}");
             }
 
-            foreach (var item in library1.FilterByGenre(TypeGenre.Horror))
+            Console.WriteLine("Filter By genre");
+            foreach (var item in kitabxana.FilterByGenre(TypeGenre.Horror))
             {
-                Console.WriteLine($"{item.No} - {item.Name} - {item.AuthorName} - {item.Genre} - {item.Price}");
+                Console.WriteLine($"{item.Name} {item.AuthorName} {item.Price} {item.Genre}");
             }
 
-            Book findedBook = library1.FindBookByNo(2);
-            Console.WriteLine(findedBook.Name);
-            Console.WriteLine(library1.IsExistByNo(1));
+            Console.WriteLine("Find Book By No");
+            Console.WriteLine(kitabxana.FindBookByNo(1).Name);
 
-            List<Book> RemovedBooks = library1.RemoveAll(x => x.Price >= 15);
+            Console.WriteLine("Is exist Book By No");
+            Console.WriteLine(kitabxana.isExistBookByNo(2));
 
-            foreach (var item in RemovedBooks)
+            Console.WriteLine("Remove All");
+            foreach (var item in kitabxana.RemoveAll(x => x.Price > 20))
             {
-                Console.WriteLine($"{item.No} - {item.Name} - {item.AuthorName} - {item.Genre} - {item.Price}");
+                Console.WriteLine($"{item.Name} {item.AuthorName} {item.Price} {item.Genre}");
             }
         }
     }

@@ -6,77 +6,40 @@ namespace Models
 {
     public class Library
     {
-        List<Book> Books = new List<Book>();
+        public List<Book> Books = new List<Book>();
 
         public List<Book> FilterByPrice(double min, double max)
         {
-            List<Book> BooksForPrice = new List<Book>();
-
-            foreach (Book book in Books)
-            {
-                if (book.Price>min && book.Price<max)
-                {
-                    BooksForPrice.Add(book);
-                }
-            }
-            return BooksForPrice;    
+            return Books.FindAll(b => b.Price > min && b.Price < max);
         }
 
         public List<Book> FilterByGenre(TypeGenre genre)
         {
-            List<Book> BooksForGenre = new List<Book>();
-
-            foreach (Book book in Books)
-            {
-                if (book.Genre == genre)
-                {
-                    BooksForGenre.Add(book);
-                }
-            }
-            return BooksForGenre;
+            return Books.FindAll(b => b.Genre == genre);
         }
 
         public Book FindBookByNo(int no)
         {
-            foreach (Book book in Books)
-            {
-                if (book.No == no)
-                {
-                    return book;
-                }
-            }
-            return null;
+            return Books.Find(b => b.No == no);
+            //return null;
         }
 
-        public bool IsExistByNo(int no)
+        public bool isExistBookByNo(int no)
         {
-            foreach (Book book in Books)
-            {
-                if (book.No == no)
-                {
-                    return true;
-                }
-            }
-            return false;
+            return Books.Exists(b => b.No == no);
         }
 
         public List<Book> RemoveAll(Predicate<Book> predicate)
         {
-            List<Book> NotRemovedBooks = new List<Book>();
-
+            List<Book> NewBooks = new List<Book>();
             foreach (Book book in Books)
             {
-                if (!(predicate(book)))
+                if (!predicate(book))
                 {
-                    NotRemovedBooks.Add(book);
+                    NewBooks.Add(book);
                 }
             }
-            return NotRemovedBooks;
-        }
-
-        public void AddNewBook(Book book)
-        {
-            Books.Add(book);
+            return NewBooks;
         }
     }
 }
